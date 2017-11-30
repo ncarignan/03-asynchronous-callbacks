@@ -1,5 +1,3 @@
-![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 03: Parallel File Processing
-===
 
 ## Submission Instructions
 * Work in a fork of this repository
@@ -11,10 +9,10 @@
 ## Resources  
   * [fs module docs](https://nodejs.org/api/fs.html)
 
-## Configuration 
+## Configuration
 Configure the root of your repository with the following files and directories. Thoughtfully name and organize any aditional configuration or module files.
 * **README.md** - contains documentation
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
+* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file
 * **.eslintrc.json** - contains the course linter configuration
 * **.eslintignore** - contains the course linter ignore configuration
 * **package.json** - contains npm package config
