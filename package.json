@@ -13,7 +13,6 @@
   "scripts": {
     "test": "jest -i --coverage",
     "lint": "eslint ."
-
   },
   "author": "",
   "license": "ISC"
