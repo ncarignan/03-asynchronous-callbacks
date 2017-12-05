@@ -1,7 +1,7 @@
 'use strict';
 
 
-const reader = module.exports = {};
+const reader = module.exports = {}; 
 const fs = require('fs');
 
 reader.readFile = (paths, callback) => {
