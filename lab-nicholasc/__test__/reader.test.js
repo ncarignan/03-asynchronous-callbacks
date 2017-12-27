@@ -4,31 +4,25 @@ const reader = require('../lib/reader');
 
 describe('reader.test.js', () => {
   test('should be 64 char', done => {
-    reader.readFile(
-      [`${__dirname}/../../DIRECTIONS.md`, `${__dirname}/../lib/reader.js`, `${__dirname}/../__test__/reader.test.js`],
+    reader.readFiles(
+      [
+        `${__dirname}/../assets/mario.txt`,
+        `${__dirname}/../assets/peach.txt`,
+        `${__dirname}/../assets/luigi.txt`,
+      ],
       (error, data) => {
         expect(error).toBeNull();
-        expect(data.length).toEqual(64);
+        expect(data[0].length).toEqual(5);
         done();
       });
   });
 
   test('should throw error if bad file', done => {
-    reader.readFile(
-      [`${__dirname}/../less-than-6`, `${__dirname}/../lib/reader.js`, `${__dirname}/../__test__/reader.test.js`],
+    reader.readFiles(
+      [`${__dirname}/../assets/luig.bad`, `${__dirname}/../assets/mario.txt`, `${__dirname}/../assets/peach.txt`],
       (error, data) => {
         expect(error).toBeTruthy();
-        // expect(data).toBeNull();
         done();
-      });
-  });
-
-  test('should throw error if not paths', () => {
-    reader.readFile(
-      'not paths',
-      (error, data) => {
-        expect(error).toBeTruthy();
-        expect(data).toBeNull();
       });
   });
 
@@ -46,12 +40,3 @@ describe('reader.test.js', () => {
     });
   });
 });
-// describe('file-reader.test.js', () => {
-//   test('should be 64 char', () => {
-//     fileReader.readFile((error, data) => {
-//       expect(error).toBeNull();
-//       expect(data).toEqual('something with 64 characters');
-//       done();
-//     });
-//   });
-// });
